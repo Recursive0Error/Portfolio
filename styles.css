@@ -179,9 +179,15 @@ h2 {
 }
 
 .hero-visual img {
-  width: min(100%, 420px);
-  margin-left: auto;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
+    width: 350px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-visual img:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
 }
 
 .section {
