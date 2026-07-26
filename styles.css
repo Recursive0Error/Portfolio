@@ -29,6 +29,7 @@ body {
   background: linear-gradient(135deg, var(--bg), #14253f 60%, #0b1424);
   color: var(--text);
   line-height: 1.65;
+  overflow-x: hidden;
 }
 
 img {
@@ -188,7 +189,8 @@ h2 {
 }
 
 .hero-visual img {
-    width: 350px;
+    width: min(100%, 350px);
+    margin: 0 auto;
     border-radius: 18px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -252,7 +254,8 @@ h2 {
 }
 
 .project-card {
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
     min-height: 460px;
 
     background: var(--surface);
@@ -367,6 +370,11 @@ h2 {
 
   .hero {
     padding-top: 3rem;
+    gap: 2rem;
+  }
+
+  .hero-visual {
+    order: -1;
   }
 
   .contact-card {
@@ -400,8 +408,34 @@ h2 {
     display: flex;
   }
 
+  .hero {
+    padding: 2.5rem 0 3rem;
+  }
+
   .hero-actions {
     flex-direction: column;
     align-items: start;
+  }
+
+  .hero-visual img {
+    width: min(100%, 280px);
+  }
+
+  .project-card {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .project-image {
+    height: 190px;
+    padding: 18px;
+  }
+
+  .project-content {
+    padding: 1.2rem;
+  }
+
+  .contact-card {
+    padding: 1.25rem;
   }
 }
